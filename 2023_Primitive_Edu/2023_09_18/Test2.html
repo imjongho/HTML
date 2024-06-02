@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>설문조사</title>
+    </head>
+    <body>
+        <h1>설문조사</h1>
+        <form>
+            <fieldset>
+                <legend>정보를 입력하세요.</legend>
+                성별: <label><input type="radio" value="1" name="sex">남</label>
+                <label><input type="radio" value="2" name="sex">여</label>
+                <br>
+                나이 : <input type="number"><br>
+                학년 : <input type="text" name="grade" list="what"><br>
+                    <datalist id="what">
+                        <option value="1학년"></option>
+                        <option value="2학년"></option>
+                        <option value="3학년"></option>
+                        <option value="4학년"></option>
+                    </datalist>
+            </fieldset><br>
+
+            <fieldset>
+                <legend>관심 분야를 선택하세요.(1개 이상)</legend>
+                네트워크 <input type="checkbox" value="1">
+                보안 <input type="checkbox" value="2">
+                인공지능 <input type="checkbox" value="3">
+            </fieldset><br>
+
+            <fieldset>
+                <legend>다음 문항에 대해 5점 척도를 답하세요.</legend>
+                본 세미나의 주제는 만족스러운가?  1<input type="range" min="1" max="5">5<br>
+                본 세미나의 초청 강사는 만족스러운가>  1<input type="range" mins="1" max="5">5<br>
+                본 세미나의 강의 시간은 적당한가?  1<input type="range" min="1" max="5">5
+            </fieldset><br>
+
+            <legned>기타 의견 사항</legned><br>
+            <textarea cols="50" rows="5">의견을 적으세요</textarea><br>
+
+            <input type="button" name="submit" value="확인">
+            <input type="button" name="reset" value="취소">
+
+        </form>
+    </body>
+</html>

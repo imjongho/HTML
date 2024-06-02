@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>7주차 연습문제1</title>
+</head>
+<body>
+<h3>큰 자리수와 낮은 자리수 같은지 비교</h3>
+<hr>
+<script>
+    var str = prompt("숫자 입력", "0");
+    if(isFinite(str)){
+        var num = parseInt(str);
+        if(num > 0){
+            var least = num % 10;
+            var most = 0;
+            while(num != 0){
+                most = num % 10;
+                num = Math.floor(num/10);
+            }
+
+            if(most == least) {
+                document.write(str + ": 같음");
+            } else {
+                document.write(str + ": 다름");
+            }
+        } else {
+            document.write(str + ": 음수나 0은 다루지 않습니다.");
+        }
+    } else{
+        document.write(str + ": 숫자가 아닙니다.");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>5주차 연습문제5</title>
+<style>
+    .MainTitle {
+        background-color: aliceblue;
+        padding: 10px;
+        margin: 10px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        box-shadow: 10px 10px 10px lightgray;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    th{
+        width: 100px;
+        height: 20px;
+        padding: 10px;
+        text-align:center;
+    }
+
+    td {
+        width: 150px;
+        height: 15px;
+        padding: 5px;
+        text-align:left;
+    }
+
+    thead {
+        background: aliceblue;
+        color: darkblue;
+    }
+
+    thrad td:hover {
+        background: lightslategray;
+    }
+</style>
+</head>
+<body>
+<header class="MainTitle">
+    <hgroup>
+        <h2>Wi-Fi</h2>
+        <h3>IEEE 802.11ac and IEEE 802.11ax</h3>
+    </hgroup>
+</header>
+
+<article>
+    <header>
+        <h1>Brief introduction</h1> 
+    </header>
+
+    <details>
+        <summary>IEEE 802.11ac</summary>
+        <p>IEEE 802.11ac is an amendment to IEEE 802.11, published in 
+            December 2013, that build on 802.11n. The 802.ac standard 
+            was retroactively labelled as Wi-Fi 5 by the Wi-Fi 
+            Alliance.</p>
+    </details>
+    <br>
+    <details>
+        <summary>IEEE 802.11ax</summary>
+        <p>IEEE 802.11ax is the successor to 802.11ac, marketed 
+            as Wi-Fi 6 (2.4 GHz and 5GHz) by the Wi-Fi Alliance. 
+            It is also known as High Efficiency Wi-Fi, for the 
+            overall improvements to Wi-Fi 6 clients under 
+            dense environments.</p>
+    </details>
+</article>
+
+
+<article>
+    <header>
+        <h1>Comparison</h1>
+    </header>
+
+    <table border="3">
+        <thead>
+            <tr><th>Protocol</th><th>Release data</th><th>Frequency</th><th>Bandwidth</th><th>Data rate</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="4">IEEE 802.11ac</td>
+                <td rowspan="4">Dec. 2013</td>
+                <td rowspan="4">5Ghz</td>
+                <td>20MHz</td>
+                <td>Up to 346.8Mbps</td>
+            </tr>
+            <tr><td>40MHz</td><td>Up to 800Mbps</td></tr>
+            <tr><td>80MHz</td><td>Up to 1733.2Mbps</td></tr>  
+            <tr><td>160MHz</td><td>Up to 3466.8Mbps</td></tr>    
+              
+            <tr>
+                <td rowspan="4">IEEE 802.11ac</td>
+                <td rowspan="4">2.5, 5, 6GHz</td>
+                <td rowspan="4">5Ghz</td>
+                <td>20MHz</td>
+                <td>Up to 1147Mbps</td>
+            </tr>
+            <tr><td>40MHz</td><td>Up to 2294Mbps</td></tr>
+            <tr><td>80MHz</td><td>Up to 4803Mbps</td></tr>  
+            <tr><td>80+80MHz</td><td>Up to 9608Mbps</td></tr>
+        </tbody>
+    </table>
+</article>
+
+
+</body>
+</html>

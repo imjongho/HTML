@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>계산기 만들기</title>
+<style>
+#exp {
+    width: 500px;
+    height: 30px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: left;
+}
+
+input[type="button"] {
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+</style>
+
+<script>
+function calculate() {
+    var exp = document.getElementById("exp");
+    try {
+        exp.value = eval(exp.value);
+    } catch (error) {
+        exp.value = 'Error';
+    }
+}
+
+function addNumber(number) {
+    var exp = document.getElementById("exp");
+    if (exp.value == '0' || exp.value == 'Error') {
+        exp.value = number;
+    } else {
+        exp.value += number;
+    }
+}
+
+function addOperator(operator) {
+    var exp = document.getElementById("exp");
+    exp.value += operator;
+}
+
+function clearAll() {
+    document.getElementById("exp").value = '0';
+}
+
+function backspace() {
+    var exp = document.getElementById("exp");
+    exp.value = exp.value.slice(0, -1);
+    if (exp.value === '') {
+        exp.value = '0';
+    }
+}
+
+function noAction(e) {
+    e.preventDefault();
+}
+</script>
+</head>
+<body>
+<h3>계산기 만들기</h3>
+<hr>
+<input type="text" id="exp" value="0"> 
+<table border="0">
+    <tr> 
+        <td><input type="button" value="Back" onclick="backspace()"></td>  
+        <td><input type="button" value="CE" onclick="clearAll()"></td>  
+        <td><input type="button" value="C" onclick="clearAll()"></td>  
+        <td><input type="button" value="=" onclick="calculate()"></td>  
+    </tr> 
+    <tr> 
+        <td><input type="button" value="7" onclick="addNumber('7')"></td>  
+        <td><input type="button" value="8" onclick="addNumber('8')"></td>  
+        <td><input type="button" value="9" onclick="addNumber('9')"></td>  
+        <td><input type="button" value="/" onclick="addOperator('/')"></td>  
+    </tr> 
+    <tr> 
+        <td><input type="button" value="4" onclick="addNumber('4')"></td>  
+        <td><input type="button" value="5" onclick="addNumber('5')"></td>  
+        <td><input type="button" value="6" onclick="addNumber('6')"></td>  
+        <td><input type="button" value="*" onclick="addOperator('*')"></td>  
+    </tr> 
+    <tr> 
+        <td><input type="button" value="1" onclick="addNumber('1')"></td>  
+        <td><input type="button" value="2" onclick="addNumber('2')"></td>  
+        <td><input type="button" value="3" onclick="addNumber('3')"></td>  
+        <td><input type="button" value="-" onclick="addOperator('-')"></td>  
+    </tr> 
+    <tr> 
+        <td><input type="button" value="0" onclick="addNumber('0')"></td>  
+        <td><input type="button" value="+" onclick="addOperator('+')"></td>  
+        <td><input type="button" value="." onclick="addNumber('.')"></td>  
+        <td><input type="button" value="NONE" onclick="noAction(event)"></td> 
+    </tr> 
+</table> 
+</body>
+</html>

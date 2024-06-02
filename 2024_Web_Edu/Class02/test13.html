@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지 커서 만들기</title>
+<style>
+body {
+    cursor: none; /* 기본 마우스 커서를 숨김 */
+}
+
+#cursor {
+    position: absolute;
+    pointer-events: none; /* 이미지가 마우스 이벤트를 차단하지 않도록 설정 */
+}
+</style>
+
+<script>
+var cursor; // 커서 이미지를 가진 <divC> 객체
+function makeCursor() {
+    cursor = document.getElementById("cursor");
+    cursor.style.zIndex = 100;
+
+    document.onmousemove = function(e) {
+        cursor.style.left = event.clientX + 'px';    // 마우스 포인터의 X좌표
+        cursor.style.top = event.clientY + 'px';     // Y좌표
+    }
+}
+</script>
+</head>
+<body onload="makeCursor()">
+<h3>이미지 커서 만들기</h3>
+<hr>
+<p id="p">
+마우스를 움직이면 이미지로 만든 커서가 마우스를 따라 다닙니다.
+</p>
+
+<div id="cursor">
+    <img src="bob.png" width="30px" height="30px">
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2024 중간고사</title>
+<style>
+    .odd-second {
+        background-color: skyblue;
+    }
+
+    .even-second {
+        background-color: violet;
+    }
+</style>
+</head>
+<body>
+<script>
+    var bookArray = new Array();
+        
+    for(var i = 0; i < 3; i++){     // 책 3권
+        var input = prompt("책제목, 가격 입력(#으로 분리)", "");
+        var info = input.split("#");
+           
+        var book = new Object();    // 새로운 책 객체 생성
+        book.title = info[0];
+        book.price = info[1];
+        // 가격을 숫자로 변환하여 저장
+        book.price = parseInt(info[1]);
+        
+        bookArray[i] = book;
+    }
+        
+    // 가격 기준 내림차순으로 책 배열 정렬 GPT 사용
+    bookArray.sort(function(a, b) {
+        return b.price - a.price;
+    });
+
+    // 리스트를 사용하여 출력   // GPT 사용
+    document.write("<h3>Book List</h3>");
+    document.write("<ul>");
+    for(var i = 0; i < bookArray.length; i++){
+        document.write("<li>" + bookArray[i].title + ", " + bookArray[i].price + "</li>");
+        document.write("<br>");
+    }
+    document.write("</ul>");
+
+    var most = bookArray[0];
+    for(var i = 1; i < bookArray.length; i++){
+        if(bookArray[i].price > most.price){
+            most = bookArray[i];
+        }
+    }
+    document.write("가장 가격이 비싼 책은 " + most.title + "입니다.");
+    
+    // 현재 시간 출력   GPT 사용
+    var currentDate = new Date();
+    document.write("<p>현재 시간: " + currentDate.toLocaleString() + "</p>");
+
+    var seconds = currentDate.getSeconds();
+    if (seconds % 2 === 0) {
+        document.body.classList.add('even-second');
+    } else {
+        document.body.classList.add('odd-second');
+    }
+</script>
+</body>
+</html>

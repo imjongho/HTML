@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2024 중간고사</title>
+<style>
+    span {
+        display: inline-block;
+        border: 2px dotted orangered;
+        background-color: lightyellow;
+        margin: 5px;
+        width: 40px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+    }
+
+    #table2 {
+        font-size: 40px;
+        border: 2px solid skyblue;
+        border-collapse: collapse;
+    }
+
+    #table2 td {
+        border: 2px solid skyblue;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+    }
+
+</style>
+</head>
+<body>
+<script>
+    var rows, columns;
+    var validInput = false;
+
+    while (!validInput) {
+        rows = prompt("행을 입력하세요", "");    
+        columns = prompt("열을 입력하세요.", "");
+
+        // row * col 짝수가 아니면 알람
+        if ((rows * columns) % 2 === 0) {
+            validInput = true;
+        } else {
+            alert("메트릭스 크기는 짝수여야 합니다.");
+        }
+    }
+
+    // 숫자 생성
+    var nums = [];
+    for (var i = 0; i < rows * columns / 2; i++) {
+        nums.push(i);
+        nums.push(i); 
+    }
+
+    // 유효한 입력일 때 테이블 생성
+    document.write("<h3>Elements</h3>"); 
+    document.write("<table border='1'>"); 
+    var index = 0;
+    for(var i = 0; i < rows; i++){
+        document.write("<tr>"); // 행 시작
+        for(var j = 0; j < columns; j++){
+            document.write("<td><span>" + nums[index++] + "</span></td>");
+        }
+        document.write("</tr>"); // 행 종료
+    }
+    document.write("</table>"); // 테이블 종료
+
+
+    // 숫자 배열을 셔플
+    shuffle(nums);
+    // 배열을 랜덤하게 섞는 함수 GPT 사용
+    function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        while (0 !== currentIndex) {
+            // 남아 있는 요소 중에서 무작위 인덱스 선택
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+
+            // 현재 요소와 무작위 요소를 교환
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+    }
+
+    document.write("<h3>Suffled Elements</h3>"); 
+    document.write("<table border='1'>"); 
+    index = 0;
+    for(var i = 0; i < rows; i++){
+        document.write("<tr>"); // 행 시작
+        for(var j = 0; j < columns; j++){
+            document.write("<td><span>" + nums[index++] + "</span></td>");
+        }
+        document.write("</tr>"); // 행 종료
+    }
+    document.write("</table>"); // 테이블 종료
+
+
+    // 새로운 테이블 생성
+    document.write("<table border='1' id='table2'>"); 
+    index = 0;
+    for(var i = 0; i < rows; i++){
+        document.write("<tr>"); // 행 시작
+        for(var j = 0; j < columns; j++){
+            document.write("<td>" + nums[index++] + "</td>");
+        }
+        document.write("</tr>"); // 행 종료
+    }
+    document.write("</table>"); // 테이블 종료
+
+    // 2초에 걸쳐 배경색 변경
+    setTimeout(function() {
+        var table2 = document.getElementById('table2');
+        table2.style.backgroundColor = 'lightslategray';
+    }, 2000);
+
+</script>
+</body>
+</html>

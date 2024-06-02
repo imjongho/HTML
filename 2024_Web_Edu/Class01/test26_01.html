@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>7주차 연습문제1</title>
+</head>
+<body>
+    <h3>큰 자리수와 낮은 자리수 같은지 비교</h3>
+    <hr>
+    <script>
+        var input_num = prompt("숫자 입력", "");
+        var num = parseInt(input_num);    // 숫자로 바꿈
+        
+        var high = num;
+        var low = num % 10;
+        while(true){
+            if(high >= 10) {
+                high = Math.floor(high / 10);
+            } else {
+                break;
+            }
+        }
+        
+        if(high == low){
+            document.write(num + ": 성공");
+        } else {
+            document.write(num + ": 다름");
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>눈이 내리는 사걀의 마을</title>
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 스크롤 방지 */
+}
+
+body {
+    background-image : url("snowTown.png");
+    background-size: cover;   /* 배경 이미지를 화면 크기에 맞게 조정 */
+    background-repeat : no-repeat;
+
+    background-position: center;
+    position: relative;
+}
+
+div.snow {
+    position : absolute;
+    font-size : 40px;
+    color : white;
+}
+</style>
+
+<script>
+var snow = new Array(30);   // 30개의 눈송이
+var x = new Array(30); 
+var y = new Array(30);
+var speedOfFall = new Array(30);
+var speedOfWind = new Array(30);
+var step = new Array(30);
+
+function snowFall() {
+    for(var i = 0; i < 30; i++) {
+        y[i] += speedOfFall[i];     // 눈송이의 다음 y좌표
+        x[i] += Math.cos(speedOfWind[i]);   // 눈송이의 다음 x 좌표, 코사인 함수곡선 이용
+        if(y[i] >= (window.innerHeight - 60)) {     // 땅에 닿은 눈송이
+            x[i] = Math.floor(Math.random() * window.innerWidth);
+            y[i] = 0;
+            speedOfFall[i] = Math.random() * 2 + 2;
+        }
+
+        if(x[i] >= window.innerWidth - 50) {
+            x[i] = window.innerWidth - 50;    // 브라우저의 크기를 넘어가는 눈송이에 대한 처리
+        } else if(x[i] < 0) {
+            x[i] = 50;
+        }
+
+        snow[i].style.top = y[i] + "px";
+        snow[i].style.left = x[i] + "px";
+        speedOfWind[i] += step[i];
+    }
+
+}
+
+// setInterval을 사용하여 50밀리초마다 snowFall 함수를 호출합니다.
+window.onload = function() {
+    makeSnow();
+    setInterval(snowFall, 50);
+}
+
+</script>
+</head>
+<body>
+<script>
+    function makeSnow() {
+        for(var i = 0; i < 30; i++) { // 30 개의 눈송이 생성
+            // 눈송이 속성 초기화
+            x[i] = Math.floor(Math.random() * window.innerWidth - 10);       
+            y[i] = Math.floor(Math.random() * window.innerHeight + 10);    
+            speedOfFall[i] = Math.random() * 2 + 2;              
+            speedOfWind[i] = 1;                               
+            step[i] = Math.random() * 0.1 + 0.05;                 
+
+            // 눈송이 한개 생성
+            var snowOne = document.createElement("div");
+            snowOne.className = 'snow';
+            snowOne.style.top = y[i] + "px";
+            snowOne.style.left = x[i] + "px";
+            snowOne.innerHTML = "*";
+            
+            document.body.appendChild(snowOne);
+            snow[i] = snowOne;
+        }
+    }
+</script>
+</body>
+</html>

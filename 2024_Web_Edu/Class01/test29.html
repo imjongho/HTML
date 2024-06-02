@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>7주차 연습문제4</title>
+<style>
+    div {
+        width: 150px;
+        padding: 10px;
+        display: inline-block;
+    }
+</style>
+</head>
+<body>
+<h3>3개의 랜덤한 색 만들기</h3>
+<hr>
+<script>
+    var divColors = new Array();    // 빈 배열 생성
+    for(var i = 0; i < 3; i++){     // 3개 div
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+        divColors[i] = "rgb(" + r + "," + g + "," + b + ")"; 
+    }
+
+    for(var i = 0; i < 3; i++){
+        document.write("<div style='background-color:" 
+        + divColors[i] + "'>" 
+        + divColors[i] + "</div>")
+    }
+</script>
+</body>
+</html>

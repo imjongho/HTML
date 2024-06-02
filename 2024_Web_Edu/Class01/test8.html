@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>폼-설문조사</title>
+</head>
+<body>
+<h3>설문조사</h3>
+<form>
+    <fieldset>
+        <legend>성별과 나이를 입력하세요.</legend>
+        성별: <input type="radio" name="sex" value="여자">여자&nbsp;
+        <input type="radio" name="sex" value="남자">남자<br>
+        나이: <input type="text" name="age"><br>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>관심 분야를 선택하세요.(1개 이상)</legend>
+        <input type="checkbox" name="subject" value="networking">네트워킹&nbsp;
+        <input type="checkbox" name="subject" value="security">보안&nbsp;
+        <input type="checkbox" name="subject" value="ai">인공지능
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>다음 문항에 대해 5점 척도로 답하세요.</legend>
+        본 세미나의 주제는 만족스러운가? &nbsp; 1<input type="range" min="1" max="5" step="1">5<br>
+        본 세미나의 초청 강사는 만족스러운가? &nbsp; 1<input type="range" min="1" max="5" step="1">5<br>
+        본 세미나의 강의 시간은 적당한가? &nbsp; 1<input type="range" min="1" max="5" step="1">5
+    </fieldset>
+    <br>
+    기타 의견 사항<br>
+    <textarea name="opinion" rows="5" cols="50">의견을 적으세요.</textarea><br>
+    <button type="submit">확인</button>
+    <button type="reset">취소</button>
+</form>
+</body>
+</html>

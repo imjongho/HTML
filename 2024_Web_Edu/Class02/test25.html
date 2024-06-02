@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마우스를 누른 채 드래깅하여 그림을 그리기</title>
+<script>
+var canvas, context;
+
+function init() {
+    canvas = document.getElementById("myCanvas");
+    context = canvas.getContext("2d");
+
+    canvas.addEventListener("mousemove", function(e) {
+        move(e)
+    }, false);
+    canvas.addEventListener("mousedown", function(e) {
+        down(e)
+    }, false);
+    canvas.addEventListener("mouseup", function(e) {
+        up(e)
+    }, false);
+    canvas.addEventListener("mouseout", function(e) {
+        out(e)
+    }, false);
+}
+
+
+var startX = 0, startY = 0;
+var drawing = false;
+
+function draw(curX, curY) {
+    context.beginPath();
+    context.lineWidth = document.getElementById("lineWidth").value;
+    context.strokeStyle = document.getElementById("strokeColor").value;
+    context.moveTo(startX, startY);
+    context.lineTo(curX, curY);
+    context.stroke();
+}
+
+function move(e) {
+    if (!drawing) {
+        return;
+    }
+    var curX = e.offsetX;
+    var curY = e.offsetY;
+    draw(curX, curY);
+    startX = curX; startY = curY;
+}
+
+function down(e) {
+    startX = e.offsetX;
+    startY = e.offsetY;
+    drawing = true;
+}
+
+function up(e) {
+    drawing = false;
+}
+
+function out(e) {
+    drawing = false;
+}
+</script>
+</head>
+<body onload="init()">
+<h3>마우스를 누른 채 드래깅하여 그림을 그리기</h3>
+<hr>
+<canvas id="myCanvas" width="500" height="200" style="background-color:aliceblue"></canvas>
+<br>
+선굵기: <input id="lineWidth" type="number" min="1" value="1">
+선색: <input id="strokeColor" type="color" value="#000000">
+</body>
+</html>

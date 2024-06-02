@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>6주차 연습문제1</title>
+<script>
+function printStar(n) {
+    var m = parseInt(n);    // 숫자로 바꿈
+    if(isNaN(m) || m < 1){
+        document.write("입력오류입니다");
+        return;
+    }
+
+    for(var i = 0; i < m; i++){
+        for(var j = 0; j <= i; j++){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+}
+</script>
+</head>
+<body>
+    <h3>별 문자 출력하기</h3>
+    <hr>
+    <script>
+        var n = prompt("정수를 입력하세요", "");
+        printStar(n);   // n은 문자열 
+    </script>
+</body>
+</html>

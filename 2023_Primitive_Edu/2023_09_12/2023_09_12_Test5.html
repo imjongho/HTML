@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>html 실습하기</title>
+        <style>
+            td{
+                border: 1px solid black;
+                width: 50px;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>표 만들기</h3>
+        <hr>
+        <table border="1">
+            <caption>학생 신체 검사 표</caption>
+            <thread>
+                <tr><th>이름</th><th>키</th><th>체중</th><th>시력</th></tr>
+            </thread>
+            <tfoot>
+                <tr><th>평균</th><th>181</th><th>77</th><th>1.3</th></tr>
+            </tfoot>
+            <tbody>
+                <tr><td>황기태</td><td>179</td><td>67</td><td>1.0</td></tr>
+                <tr><td>이재문</td><td>177</td><td>77</td><td>2.0</td></tr>
+                <tr><td>정인환</td><td>189</td><td>87</td><td>1.2</td></tr>
+            </tbody>
+        </table>
+
+        <hr>
+            <table border="1">
+                <capation>비정형 표 만들기</capation>
+                <tr><td rowspan="3">A</td><td colspan="2">B</td></tr>
+                <tr><td rowspan="2">C</td><td>D</td></tr>
+                <tr><td>E</td></tr>
+                <tr><td colspan="3">F</td></tr>
+                <tr><td colspan="2">G</td><td>H</td></tr>
+            </table>
+    </body>
+</html>

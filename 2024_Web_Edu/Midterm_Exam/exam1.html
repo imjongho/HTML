@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>상담카드</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td, th {
+            padding: 10px; 
+            height: 20px; 
+        }
+
+        tr {
+            border-bottom: 1px solid skyblue;
+        }
+        
+        thead {
+            background-color: skyblue; 
+            text-align: center; 
+        }
+
+        /* 마우스 커서가 올라가면 해당 행의 배경색을 변경합니다 GPT사용*/
+        tbody tr:hover {
+            background-color: lightslategray;
+        }
+    </style>
+  </head>
+  <body>
+    <form>
+        <table>
+            <thead>
+                <tr><th colspan="4">상담카드</th></tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>이름</td>
+                    <td colspan="3"><input type="text"size="60"></td>
+                </tr>
+                <tr>
+                    <td>상담 희망일</td>
+                    <td><input type="date"></td>
+                    <td>연락처</td>
+                    <td><select>
+                        <option>010<option>070<option>011
+                        </select>
+                        -<input type="text" size="4" maxlength="4">
+                        -<input type="text" size="4" maxlength="4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>희망 진로</td>
+                    <td colspan="3">
+                        <label><input type="radio" name="Career" value="1">대학원</label>
+                        <label><input type="radio" name="Career" value="2">대기업</label>
+                        <label><input type="radio" name="Career" value="3">창업</label>
+                        <label><input type="radio" name="Career" value="4">유학</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>상담 내용</td>
+                    <td colspan="3"><textarea rows="5" cols="65" placeholder="Intelligent Networking and Security"></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+  </body>
+</html>

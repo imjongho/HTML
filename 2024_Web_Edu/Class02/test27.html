@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>캔버스 이용 게임</title>
+<script>
+    var canvas;
+    var context;
+    var velocity;
+    var angle;
+    var ballVx;
+    var ballVy;
+    var ballX;
+    var ballY;
+    var ballRadius;
+    var score = 0;
+    var image = new Image();
+    var timer;
+    var g = 1.98;
+
+    function init() {
+        ballX = 10;
+        ballY = 250;
+        ballRadius = 10;
+        canvas = document.getElementById("canvas");
+        context = canvas.getContext("2d");
+        draw();
+    }
+
+    /* 전체 화면 그리기 */
+    function draw() {
+        context.clearRect(0, 0, 500, 300); /* 화면 지우기 */
+        drawBall();
+        drawBackground();
+    }
+
+    /* 공 그리기 */
+    function drawBall() {
+        context.beginPath();
+        context.arc(ballX, ballY, ballRadius, 0, 2.0 * Math.PI, true);
+        context.fillStyle = "black";
+        context.fill();
+    }
+
+    /* 그림 그리기 */
+    function drawBackground() {
+        image.onload = function () {
+            context.drawImage(image, 400, 100, 100, 100);
+        }
+        image.src = "trashcan.png";
+    }
+
+    /* 시작 */
+    function start() {
+        init();
+
+        /* Number: converts a value to a number */
+        velocity = Number(document.getElementById("velocity").value);
+        angle = Number(document.getElementById("angle").value);
+        var angleR = angle * Math.PI / 180;
+
+        ballVx = velocity * Math.cos(angleR);
+        ballVy = -velocity * Math.sin(angleR);
+
+        draw();
+        timer = setInterval(calculate, 50);
+    }
+
+    /* 공 현재 속도 및 위치 업데이트 */
+    function calculate() {
+        ballVy = ballVy + g;
+        ballY = ballY + ballVy;
+        ballX = ballX + ballVx;
+
+        /* 공이 목표물에 맞을 때 */
+        if ((ballX >= 420) && (ballX <= 480) && (ballY >= 100) && (ballY <= 200)) {
+            score++;
+            document.getElementById("score").innerHTML = "Score = " + score;
+            clearInterval(timer);
+        }
+
+        /* 공이 경계를 벗어날 때 */
+        if (ballY >= 300 || ballY <= 0) {
+            clearInterval(timer);
+        }
+
+        drawBall();
+    }
+</script>
+</head>
+<body onload="init()">
+    <canvas id="canvas" width="500" height="300" style="background-color:magenta"></canvas>
+    <div id="control">
+        Velocity<input id="velocity" value="30" type="number" min="0" max="100" step="1" />
+        Angle<input id="angle" value="45" type="number" min="0" max="90" step="1" />
+        <div id="score">Score = 0</div>
+        <button onclick="start()">Start</button>
+    </div>
+</body>
+</html>

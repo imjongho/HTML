@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> 상담카드</title>
+  </head>
+  <body>
+    <center>
+    <h2>상담카드</h2>
+    <form>
+      <table border="1">
+            <tr>
+                <td>좌우명</td>
+                <td colspan="3"><input type="text"size="60"></td>
+            </tr>
+            <tr>
+                <td>학번</td>
+                <td><input type="text" size="20"></td>
+                <td>이름</td>
+                <td><input type="text" size="20"></td>
+            </tr>
+            <tr>
+                <td>주민<br>번호</td>
+                <td><input type="text" size="6" maxlength="6">-<input type="password" size="7" maxlength="7"></td>
+                <td>메일<br>주소</td>
+                <td><input type="email" size="20"></td>
+            </tr>
+            <tr>
+                <td>상담<br>희망일</td>
+                <td><input type="date"></td>
+                <td>연락처</td>
+                <td><select>
+                    <option>010<option>070<option>011
+                    </select>
+                    -<input type="text" size="4">
+                    -<input type="text" size="4">
+                </td>
+            </tr>
+            <tr>
+                <td>희망<br>진로</td>
+                <td colspan="3">
+                    <label><input type="radio" name="Career" value="1">대학원</label>
+                    <label><input type="radio" name="Career" value="2">대기업</label>
+                    <label><input type="radio" name="Career" value="3">창업</label>
+                    <label><input type="radio" name="Career" value="4">유학</label>
+                </td>
+            </tr>
+            <tr>
+                <td>학습량<br>(0~24시간)</td>
+                <td colspan="3">
+                    <input type="number" min="0.0" max="24.0" step="0.5">시간<br>
+                    집중 정도(0~10) : 0<input type="range" min="0" max="10" list="temperatures">10
+                    <datailst id="temperatures">
+                        <option value="1">
+                        <option value="5">
+                        <option value="9">
+                    </datailst>
+                </td>
+            </tr>
+            <tr>
+                <td>상담 희망<br>목록</td>
+                <td colspan="3"><textarea rows="5" cols="65" placeholder="유무선네트워킹"></textarea></td>
+            </tr>
+      </table>
+    </form>
+  </body>
+</html>

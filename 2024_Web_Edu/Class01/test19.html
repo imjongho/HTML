@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>5주차 연습문제4</title>
+<style>
+div {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  position: relative;
+  animation-name: color-shift-move;
+  animation-duration: 5s; /* 총 지속 시간 */
+  animation-iteration-count: infinite; /* 무한 반복 */
+}
+
+@keyframes color-shift-move {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+</style>
+</head>
+<body>
+<div>Animation</div>
+</body>
+</html>

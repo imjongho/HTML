@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>임종호의 자기소개 페이지</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="init()">
+<header id="header">
+    <nav>
+        <ul class="nav-list">
+            <li><a href="#home" class="list-link">Home</a></li>
+            <li><a href="#about" class="list-link">About</a></li>
+            <li><a href="#skills" class="list-link">Skills</a></li>
+            <li><a href="#portfolio" class="list-link">Portfolio</a></li>
+            <li><a href="#contact" class="list-link">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main">
+    <section id="home" class="cont-section">
+        <h2>Home</h2>
+        <hr>
+        <audio controls>
+            <source src="media/music.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="slide-container">
+            <div id="slide-album">
+                <div id="slide-images">
+                    <img src="media/img-me-1.jpg" alt="내 사진" />
+                    <img src="media/img-me-2.jpg" alt="내 사진" />
+                    <img src="media/img-me-3.jpg" alt="내 사진" />
+                    <img src="media/img-me-4.jpg" alt="내 사진" />
+                </div>
+                <button id="btn-next">▶</button>
+                <button id="btn-prev">◀</button>
+            </div>
+            <div class="info-about">
+                <ul>
+                    <li><strong>이름:</strong> 임종호</li>
+                    <li><strong>나이:</strong> 2001.09.01</li>
+                    <li><strong>거주지:</strong> 인천광역시 계양구</li>
+                    <li><strong>학교/전공:</strong> 공주대학교(천안) / 소프트웨어학과</li>
+                    <li><strong>전화번호:</strong> 010-9958-4502</li>
+                    <li><strong>이메일:</strong> imjongho135@gmail.com</li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/imjongho135" target="_blank">imjongho135</a></li>
+                    <li><strong>관심기업:</strong> 카카오페이지, 리디북스, 지역농협</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="cont-section">
+        <h2>About Me</h2>
+        <hr>
+        <h3>관심 기술 및 관련 기업 상세 내용</h3>
+        <p>글 그림 등 자유 형식으로 쓰기, 표로 제작함</p>
+
+        <br>
+        <h3>주제 관련 Future Plan</h3>
+        <p>관심 기술 공부 계획 및 취업(혹은 대학원, 창업 등) 준비 계획 작성 (공모전, 인턴십, 논문, 기타 취업 준비 계획)[진로에 연관된 내용으로 작성]</p>
+
+        <br>
+        <h3>본인 소개 페이지 작성(2022 삼성전자 비경력직 자소서 항목 기반으로 선정함)</h3>
+        <div>
+            <p><strong>주제 선정 동기와 이루고 싶은 목표</strong></p>
+            <button onclick="toggleAnswer(this, '주제 선정의 이유와 목표에 대해 서술합니다.')">답변 보기</button>
+        </div>
+        <div>
+            <p><strong>본인 성장 과정(가장 큰 영향을 끼친 사건, 인물 등을 포함하여 작성 - 작품 속 가상인물도 가능)</strong></p>
+            <button onclick="toggleAnswer(this, '가장 큰 영향을 끼친 사건, 인물 등을 포함하여 작성합니다.')">답변 보기</button>
+        </div>
+        <div>
+            <p><strong>최근 사회 이슈 중 중요하다고 생각되는 한 가지를 선택하고 자신의 견해 기술</strong></p>
+            <button onclick="toggleAnswer(this, '프로젝트/과제 중 기술적으로 가장 어려웠던 부분과 해결 방안에 대해 서술합니다.')">답변 보기</button>
+        </div>
+        <div>
+            <p><strong>프로젝트/과제 중 기술적으로 가장 어려웠던 부분과 
+                해결 방안에 대해 서술 (과제 개요, 어려웠던 점, 해결
+                방법, 결과 포함)</strong></p>
+            <button onclick="toggleAnswer(this, '글, 그림 등 자유 양식으로 작성합니다.')">답변 보기</button>
+        </div>
+        <div>
+            <p><strong>본인 역량에 대해 자유롭게 기술</strong></p>
+            <button onclick="toggleAnswer(this, '프로젝트/과제 중 기술적으로 가장 어려웠던 부분과 해결 방안에 대해 서술합니다.')">답변 보기</button>
+        </div>
+    </section>
+
+
+    <section id="skills" class="cont-section-skill">
+        <h2>Skills</h2>
+        <hr>
+        <div class="skills-category">
+            <!-- Programming Languages -->
+            <div class="skills-container">
+                <div class="skill">
+                    <img src="media/html-icon.png" alt="HTML" class="large-icon">
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="media/css-icon.png" alt="CSS" class="large-icon">
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="media/js-icon.png" alt="JavaScript" class="large-icon">
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="media/java-icon.png" alt="Java" class="large-icon">
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="media/python-icon.png" alt="Python" class="large-icon">
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 50%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-container">
+                <div class="skill">
+                    <img src="media/r-icon.png" alt="R" class="large-icon">
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 40%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="media/c-icon.png" alt="C" class="large-icon">
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="media/cpp-icon.png" alt="C++" class="large-icon">
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="media/php-icon.png" alt="PHP" class="large-icon">
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 30%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="skills-category">
+            <!-- Tools, Databases, Servers 등 한것들 -->
+            <div class="skills-container">
+                <div class="skill">
+                    <img src="media/androidstudio-icon.png" alt="Android Studio" class="extra-large-icon">
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="media/apache-icon.png" alt="Apache" class="extra-large-icon">
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 30%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="media/firebase-icon.png" alt="Firebase" class="extra-large-icon">
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 40%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="media/mysql-icon.png" alt="MySQL" class="extra-large-icon">
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="portfolio" class="cont-section">
+        <h2>Portfolio</h2>
+        <hr>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="media/project1.jpg" alt="Project 1" class="project-image">
+                <h3>Project Title 1</h3>
+                <p>Short description of the project. Highlight the main features and technologies used.</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <img src="media/project2.jpg" alt="Project 2" class="project-image">
+                <h3>Project Title 2</h3>
+                <p>Short description of the project. Highlight the main features and technologies used.</p>
+                <p><strong>Technologies:</strong> React, Node.js</p>
+                <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <img src="media/project3.jpg" alt="Project 3" class="project-image">
+                <h3>Project Title 3</h3>
+                <p>Short description of the project. Highlight the main features and technologies used.</p>
+                <p><strong>Technologies:</strong> Python, Django</p>
+                <a href="https://github.com/yourusername/project3" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <img src="media/project4.jpg" alt="Project 4" class="project-image">
+                <h3>Project Title 4</h3>
+                <p>Short description of the project. Highlight the main features and technologies used.</p>
+                <p><strong>Technologies:</strong> Java, Spring Boot</p>
+                <a href="https://github.com/yourusername/project4" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="contact" class="cont-section">
+        <h2>Contact</h2>
+        <hr>
+        <p>여기에 Contact 섹션 내용을 추가하세요.</p>
+    </section>
+</main>
+
+<footer id="footer">
+    <p>© 2022 - HyeRin</p>
+</footer>
+
+<button onclick="moveToTop()" class="btn-moveTop">Top</button>
+
+<script src="function.js"></script>
+</body>
+</html>

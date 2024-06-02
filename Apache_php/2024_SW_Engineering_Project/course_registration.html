@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>수강신청 시스템</title>
+<link href="course_registration.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<form action="check_course.php" method="post">
+    <fieldset>
+        <legend>개설과목 조회</legend>
+        <div class="item">
+            이수구분 
+            <select name="courseClassification" size="1">
+                <option>선택</option>
+                <option>전공필수</option>
+                <option>전공선택</option>
+                <option>핵심교양</option>
+                <option>일반교양</option>
+            </select>
+        </div>
+        <div class="item">
+            대학
+            <select name="university" size="1">
+                <option>선택</option>
+                <option>공과대학</option>
+                <option>사범대학</option>
+                <option>자연과학</option>
+            </select>
+        </div>
+        <div class="item">
+            학과
+            <select name="department" size="1">
+                <option>선택</option>
+                <option>소프트웨어학과</option>
+                <option>컴퓨터공학과</option>
+                <option>인공지능학과</option>
+            </select>
+        </div>
+        <div class="item">
+            대상학년
+            <select name="target_grade" size="1">
+                <option>선택</option>
+                <option>1학년</option>
+                <option>2학년</option>
+                <option>3학년</option>
+                <option>4학년</option>
+            </select>
+        </div>
+        <button class="check_button" id="check" type="submit">조회</button>
+        <button class="logout_button" id="logout" type="button">로그아웃</button>
+
+        <article id="scroll-table1">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>수강신청</th>
+                        <th>과목번호</th>
+                        <th>이수구분</th>
+                        <th>분반</th>
+                        <th>과목명</th>
+                        <th>학점</th>
+                        <th>담당교수</th>
+                        <th>대상학년</th>
+                        <th>인원제한</th>
+                        <th>시간표</th>
+                        <th>강의실</th>
+                        <th>개설학과</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php include 'all_course.php'; ?>
+                </tbody>
+            </table>
+        </article>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>수강신청 내역</legend>
+        <div>
+            과목번호 : 
+            <input id="subject_code" type="text" size="7" maxlength="7">
+            &nbsp<button type='button' id='register'>수강신청</button>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    // 수강신청 버튼에 이벤트 리스너 추가
+                    document.querySelector('#register').addEventListener('click', function() {
+                        const subjectCode = document.getElementById('subject_code').value;
+                        if(subjectCode) {
+                            registerCourse(subjectCode); // 과목 번호가 있다면 수강신청 함수 호출
+                        } else {
+                            alert('과목번호를 입력해주세요.');
+                        }
+                    });
+                });
+            </script>
+        </div>
+        <div class="item">
+            수강신청가능학점: <span id="max-credits">21</span>학점
+        </div>
+        <div class="item">
+            총 신청학점: <span id="total-credits">3</span>학점
+        </div>
+        <div class="item">
+            신청과목수: <span id="course-count">1</span>과목
+        </div>
+
+        <article id="scroll-table2">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>취소</th>
+                        <th>과목번호</th>
+                        <th>이수구분</th>
+                        <th>분반</th>
+                        <th>과목명</th>
+                        <th>학점</th>
+                        <th>담당교수</th>
+                        <th>대상학년</th>
+                        <th>시간표</th>
+                        <th>강의실</th>
+                        <th>개설학과</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php include 'registration_course.php'; ?>
+                </tbody>
+            </table>
+        </article>
+    </fieldset>
+</form>
+
+<script src="check_button.js"></script>
+<script src="registration_button.js"></script>
+<script src="cancel_button.js"></script>
+</body>
+</html>

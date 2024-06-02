@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>7주차 연습문제5</title>
+</head>
+<body>
+<h3>book 객체 배열 만들기</h3>
+<hr>
+<script>
+    var bookArray = new Array();
+        
+    for(var i = 0; i < 3; i++){     // 책 3권
+        var input = prompt("콤마(,)로 분리하면서 책제목 저자 가격 수으로 입력", "HTML5,황기태,20000");
+        var info = input.split(",");
+           
+        var book = new Object();    // 새로운 책 객체 생성
+        book.title = info[0];
+        book.author = info[1];
+        book.price = info[2];
+        
+        bookArray[i] = book;
+    }
+        
+    for(var i = 0; i < bookArray.length; i++){
+        document.write(bookArray[i].title + ", ");
+        document.write(bookArray[i].author + ", ");
+        document.write(bookArray[i].price + "<br>");
+    }
+
+    var most = bookArray[0];
+    for(var i = 1; i < bookArray.length; i++){
+        if(bookArray[i].price > most.price){
+            most = bookArray[i];
+        }
+    }
+    document.write("<hr>가장 가격이 비싼 책은 " + most.title);   
+</script>
+</body>
+</html>

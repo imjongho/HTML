@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2024중간고사</title>
+<style>
+div {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  vertical-align: top;
+  z-index: 1; /* GPT Animation이 가장 위로 올 수 있도록 설정 */
+}
+
+#moveDiv {
+    text-align: center;
+    line-height: 100px;
+    animation-name: color-shift-move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+    z-index: 2; /* Animation이 가장 위에 있도록 설정 */
+    left: 10px; /* 초기 위치 설정 */
+    top: 10px; /* 초기 위치 설정 */
+}
+
+@keyframes color-shift-move {
+  0% {
+    background-color: red;
+    left: 10px;
+    top: 10px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 10px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 10px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 10px;
+    top: 10px;
+  }
+}
+
+#box1 {
+    top: 0px;
+    left: 0px;
+    background-color: blue;
+}
+
+#box2 {
+    top: 30px;
+    left: 30px;
+    background-color: yellow;
+}
+
+#box3 {
+    top: 60px;
+    left: 60px;
+    background-color: green;
+}
+
+/* 마우스 오버 시 div가 가장 위로 올라오도록 설정 */
+.box:hover {
+    z-index: 3;
+}
+</style>
+</head>
+<body>
+<div id="moveDiv">Animation</div>
+<div id="box1" class="box">Box #1</div>
+<div id="box2" class="box">Box #2</div>
+<div id="box3" class="box">Box #3</div>
+</body>
+</html>

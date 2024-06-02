@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM 객체 동적 삽입</title>
+<script>
+// 버튼에 대한 참조 obj, 답변 텍스트 text
+function addAnswer(obj, text) {
+    // 클릭된 버튼의 부모 요소: 어떤 div인지
+    var parent = obj.parentElement;
+    // 답변의 중복 추가 방지: 버튼이 마지막 요소가 아니면 함수 종료
+    if(obj != parent.lastElementChild) {
+        return;
+    }
+    var newP = document.createElement("p");
+    newP.onclick = function() {
+        var par = this.parentElement;
+        par.removeChild(this);
+    };
+    newP.innerHTML = text;
+    parent.appendChild(newP);
+}
+</script>
+</head>
+<body>
+<h3>정답의 동적 삽입</h3>
+<hr>
+<div>
+    <p>Q1. What is the learning technique that intelligent 
+    agents ought to take actions in an environment in order 
+    to maximize the notion of cumulative reward?</p>
+    <button onclick="addAnswer(this, 'Reinforcement Learning')">A1.</button>
+</div>
+
+<div>
+    <p>Q2. What is the learning technique that maps an input 
+    to an output based on example input-output pairs? 
+    (It infers a function from labeled training data consisting 
+    of a set of training examples.)</p>
+    <button onclick="addAnswer(this, 'Supervised Learning')">A2.</button>
+</div>
+
+<div>
+    <p>Q3. What is the learning technique that learns patterns 
+    from untagged data? (Contrast to the supervised 
+    learning, it exhibits self-organization that captures 
+    patterns as probability densities or a combination 
+    of neural feature preferences.)</p>
+    <button onclick="addAnswer(this, 'Unsupervised Learning')">A3.</button>
+</div>
+
+</body>
+</html>

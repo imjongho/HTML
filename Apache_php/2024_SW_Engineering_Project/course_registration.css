@@ -1,0 +1,154 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px 20px 20px 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+legend {
+    background-color: #efefef;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.item {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 5px;
+}
+
+.logout_button {
+    padding: 5px 10px;
+    background-color: #45a049;
+    color: #fff; 
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 720px;
+}
+
+.logout_button:hover {
+    background-color: #3a863e;
+}
+
+select {
+    width: 100px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* 학과 선택 너비를 늘림 */
+select[name="department"] {
+    width: 150px; /* 너비 조정 */
+}
+
+#scroll-table1 {
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 4px;
+    height: 270px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#scroll-table2 {
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 4px;
+    height: 210px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;    /* 테이블 전체 너비를 화면에 맞춥니다 */
+    font-size: 14px; /* 폰트 사이즈 조정 */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    height: 20px; /* 필요에 따라 조정 */
+}
+
+th {
+    background-color: #f8f8f8;
+}
+
+.item span {
+    font-weight: bold;
+}
+
+/* 파란색 계열의 수강신청 버튼 스타일 */
+button.register {
+    background-color: #007bff; /* 파란색 */
+    color: #fff; /* 흰색 텍스트 */
+    border: none; /* 테두리 없음 */
+    border-radius: 4px; /* 모서리를 둥글게 만듦 */
+    padding: 5px 10px; /* 내부 여백 설정 */
+    cursor: pointer; /* 커서를 포인터로 변경하여 클릭 가능한 상태로 표시 */
+}
+
+button.register:hover {
+    background-color: #0056b3; /* 마우스 호버 시 더 진한 파란색 */
+}
+
+button#register {
+    background-color: #007bff; /* 파란색 */
+    color: #fff; /* 흰색 텍스트 */
+    border: none; /* 테두리 없음 */
+    border-radius: 4px; /* 모서리를 둥글게 만듦 */
+    padding: 5px 10px; /* 내부 여백 설정 */
+    cursor: pointer; /* 커서를 포인터로 변경하여 클릭 가능한 상태로 표시 */
+}
+
+button#register:hover {
+    background-color: #0056b3; /* 마우스 호버 시 더 진한 파란색 */
+}
+
+#check {
+    background-color: #45a049;
+    color: #fff; 
+    border: none; 
+    border-radius: 4px; 
+    padding: 5px 10px;
+    cursor: pointer; 
+}
+#check:hover {
+    background-color: #3a863e;
+}
+
+button.cancel {
+    background-color: #dc3545; 
+    color: #fff; 
+    border: none; 
+    border-radius: 4px; 
+    padding: 5px 10px; 
+    cursor: pointer; 
+}
+
+button.cancel:hover {
+    background-color: #c82333;
+}
+
+

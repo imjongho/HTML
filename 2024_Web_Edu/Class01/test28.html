@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>7주차 연습문제3</title>
+<style>
+    td {
+        width: 50px;
+        height: 50px;
+    }
+</style>
+</head>
+<body>
+<script>
+    var row = prompt("행을 입력하세요", "");    
+    var column = prompt("열을 입력하세요.", "");
+    
+    document.write("<table border='1'>"); 
+    for(var i = 0; i < row; i++){
+        document.write("<tr>"); // 행 시작
+        for(var j = 0; j < column; j++){
+            document.write("<td></td>");
+        }
+        document.write("</tr>"); // 행 종료
+    }
+    document.write("</table>"); // 테이블 종료
+</script>
+</body>
+</html>

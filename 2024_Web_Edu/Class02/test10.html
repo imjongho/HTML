@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>라디오 버튼을 클릭하면 이미지를 출력합니다</title>
+<script>
+function findChecked() {
+    var found = null;
+    var sel = document.getElementsByName("fruits");
+    var img = document.getElementById('fruitimage');
+
+    for(var i = 0; i < sel.length; i++){
+        if(sel[i].checked == true) {
+            found = sel[i];
+        }
+    }
+    img.src = found.value;
+}
+</script>
+</head>
+<body onload="displayImage()">
+<h3>라디오 버튼을 클릭하면 이미지를 출력합니다</h3>
+<hr>
+<form>
+    <input type="radio" name="fruits" value="banana.jpg" checked onclick="findChecked()">바나나
+    <input type="radio" name="fruits" value="mango.jpg" onclick="findChecked()">망고
+    <input type="radio" name="fruits" value="apple.jpg" onchange="findChecked()">사과
+</form>
+<img id="fruitimage" width="200" height="200" src="banana.jpg">
+</body>
+</html>
