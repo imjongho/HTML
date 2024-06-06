@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>임종호의 자기소개 페이지</title>
-    <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<title>임종호의 자기소개 페이지</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body onload="init()">
 <header id="header">
@@ -11,7 +11,7 @@
         <ul class="nav-list">
             <li><a href="#home" class="list-link">Home</a></li>
             <li><a href="#about" class="list-link">About</a></li>
-            <li><a href="#skills" class="list-link">Skills</a></li>
+            <li><a href="#skill" class="list-link">Skill</a></li>
             <li><a href="#portfolio" class="list-link">Portfolio</a></li>
             <li><a href="#contact" class="list-link">Contact</a></li>
         </ul>
@@ -19,10 +19,10 @@
 </header>
 
 <main id="main">
-    <section id="home" class="cont-section">
+    <section id="home" class="cont-section-home">
         <h2>Home</h2>
         <hr>
-        <audio controls>
+        <audio controls loop>
             <source src="media/music.mp3" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
@@ -45,8 +45,8 @@
                     <li><strong>학교/전공:</strong> 공주대학교(천안) / 소프트웨어학과</li>
                     <li><strong>전화번호:</strong> 010-9958-4502</li>
                     <li><strong>이메일:</strong> imjongho135@gmail.com</li>
-                    <li><strong>GitHub:</strong> <a href="https://github.com/imjongho135" target="_blank">imjongho135</a></li>
-                    <li><strong>관심기업:</strong> 카카오페이지, 리디북스, 지역농협</li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/imjongho" target="_blank">깃허브 바로가기</a></li>
+                    <li><strong>관심기업:</strong> 지역(단위)농협, <a href="https://www.nonghyup.com/main/psniMain.do" target="_blank">농협 홈페이지 바로가기</a></li>
                 </ul>
             </div>
         </div>
@@ -55,42 +55,288 @@
     <section id="about" class="cont-section">
         <h2>About Me</h2>
         <hr>
-        <h3>관심 기술 및 관련 기업 상세 내용</h3>
-        <p>글 그림 등 자유 형식으로 쓰기, 표로 제작함</p>
+        <h3>관심 기술 및 관련 기업 상세 내용(글 그림 등 자유 양식)</h3>
+        <!-- 관심 기업 -->
+        <!-- 첫 번째 테이블 -->
+        <table class="about-table">
+            <tr>
+                <td class="about-table-img-cell">
+                    <img src="media/NH-icon.jpg" alt="농협 로고" class="about-img-small">
+                </td>
+                <td>
+                    <h4>농협이란?</h4>
+                    <p>"농협"은 "농업협동조합"의 줄임말입니다. 농업과 협동조합의 의미를 이해하면 농협을 정의할 수 있습니다.<br>
+                        농업이란 토지를 이용하여 작물을 재배하거나 동물을 사육하는 산업을 의미하며, 농사와 목축을 포함합니다.
+                        협동조합이란 재화 또는 용역의 구매, 생산, 판매, 제공 등을 협력하여 운영함으로써 조합원의 권익을 향상시키고 지역 사회에 공헌하고자 하는 사업 조직입니다.<br>
+                        따라서 농협이란 농업인들이 스스로 협동조합을 조직하여 농업 생산력을 높이고 농업인의 지위향상은 물론 국민경제의 균형있는 발전을 목표로 설립된 농민들의 자주적인 생산자단체(비영리단체)라고 정의할 수 있습니다. 
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="about-table-img-cell">
+                    <img src="media/NH-symbol.gif" alt="농협 심볼" class="about-img-small">
+                </td>
+                <td>
+                    <h4>농협심볼의 의미</h4>
+                    <p>[V]꼴은 [농]자의 [ㄴ]을 변형한 것으로 싹과 벼를 의미하며 농협의 무한한 발전을, [V]꼴을 제외한 아랫부분은 [업]자의 [ㅇ]을 변형한 것으로 원만함과 돈을 의미하며 협동단결을 상징합니다.<br>
+                        또한 마크 자체는 [협]자의 [ㅎ]을 변형한 것으로 [ㄴ]+[ㅎ]은 농협을 나타내고 항아리에 쌀이 가득 담겨 있는 형상을 표시하여 농가 경제의 융성한 발전을 상징합니다.
+                    </p>
+                </td>
+            </tr>
+        </table>
+        
+        <!-- 두 번째 테이블 -->
+        <table class="about-table">
+            <tr>
+                <td class="about-table-img-cell">
+                    <img src="media/NH-structure.png" alt="농협 구조도" class="about-img-large">
+                    <img src="media/NH-structure2.png" alt="농협 구조도" class="about-img-large">
+                </td>
+                <td>
+                    <h4>농협의 구조별 구분</h4>
+                    <p>농협은 농업 분야에서 탄생한 협동조합이라고 정의했습니다. 농업은 반드시 필요한 요소이기 때문에 각 지역마다, 동네마다 협동조합이 생겨났고 
+                        숫자가 많아지니 농업과 연관이 되는 축산업을 중점적으로 하는 축협도 생기고, 인삼을 주로 취급하는 인삼협 등이 생기게 되었습니다. 
+                        그러면 누군가는 대장이 되어 이토록 많은 농업협동조합들을 관리해야 하는데, 그것이 농협중앙회입니다. 원래는 축협중앙회가 따로 있었으나 농협중앙회로 합병되었습니다.
+                        쉽게 말해, 농협중앙회가 머리를 담당하고 지역농협은 그 밑에서 손과 발을 담당한다고 생각됩니다.<br><br>
+                        조합원: 사람 1명, 농업과 연관된 사람<br><br>
+                        농.축협(협동조합): 조합원이 모여 지역별(시/군)로 존재하는 조합<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span>● 지역(단위)농협</span>: 산업이 농업(논, 밭)인 조합, 조합원들이 만든 일종의 상호금융기관으로 우리가 지역에서 흔히 보는 NH농협(지역농협, 2금융권)을 말하고 밑에 4개의 조합을 어우르는 단어로도 사용됨(<span>내가 관심있고 취업하고자 하는 곳</span>)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;● 지역축협: 산업이 축산업(동물로 소가 핵심)인 조합, 축협은 지역당 1개만 존재<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;● 품목농협: 특정 작물(과일 과수작물, 원예작물 등)을 중심으로 뭉쳐있는 조합<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;● 품목축협: 특정 축산물(닭, 돼지 등 소를 제외한 다른 동물)을 중심으로 뭉쳐있는 조합<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;● 인삼협: 인삼만을 다루는 조합<br><br>
+                        농협중앙회(중앙관리): 지역농협들의 연합체격(대표)으로 자체적으로 따로 경제.금융 회사 운영, 농.축협들 관리.교육 등을 진행<br>
+                        농협중앙회는 금융사업과 경제사업을 별도로 지주회사를 만들어 이관함<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;● 농협경제지주: 경제부문으로 농협하나로유통, 농협목우톤, 남해화학, 농협사료 등 여러 자회사를 운영<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;● NH농협금융지주: 금융부문으로 1금융권인 NH농협은행을 필두로 NH농협생명, NH농협손해보험, NH투자증권 등을 운영<br><br>
+                        <span>여기 속한 직원들은 모두 농협 직원은 맞는데, 별개의 조합이기 때문에 신입채용을 같이 한번에 하는게 아니라 각각 진행합니다.</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="about-table-img-cell">
+                    <img src="media/NH-bank.png" alt="농협 은행 구분" class="about-img-large">
+                </td>
+                <td>
+                    <h4>지역농협(NH농협)과 NH농협은행의 차이</h4>
+                    <p>
+                        지역농협(NH농협)과 NH농협은행의 가장 큰 차이점은 농협이라는 글자 뒤에 "은행"이 붙느냐 붙지 않느냐입니다.
+                        "은행"이 붙어 있는 NH농협은행은 국가에서 인정하는 제1금융권 은행으로, 일반 상업은행과 같은 역할을 합니다.
+                        반면, "은행"이 붙지 않은 지역농협은 제2금융권에 속하며, 상호금융 업무를 포함하여 지역 단위로 운영됩니다.
+                        농협중앙회는 직접적으로 은행 업무를 하지 않고, NH농협은행을 따로 구성해 자체적으로 운영하며, 농업 관련 금융 서비스를 제공합니다.
+                        지역농협은 각 지역에서 농업인들을 위한 금융 서비스와 협동조합 업무를 담당하며, NH농협이라는 이름으로 운영됩니다.
+                        따라서, 농협중앙회는 중앙 조직으로서 NH농협은행을 통해 전국적인 금융 서비스를 제공하고, 지역농협은 각 지역에서 농업인들과 밀접한 관계를 유지하며 
+                        금융과 협동조합 업무를 수행하는 구조로 이해할 수 있습니다.<br><br>
 
-        <br>
-        <h3>주제 관련 Future Plan</h3>
-        <p>관심 기술 공부 계획 및 취업(혹은 대학원, 창업 등) 준비 계획 작성 (공모전, 인턴십, 논문, 기타 취업 준비 계획)[진로에 연관된 내용으로 작성]</p>
+                        통장 계좌번호도 차이가 납니다.
+                        계좌번호에 01,02,12가 들어가 있으면 농협은행, 51,52,56이 들어가 있으면 지역농협입니다.
+                        금융업무는 서로 공유해서 사용하기에 입금은 아무데나 가능하나 계좌를 어디에 활용할 수 있는지는 확인해야 합니다.
+                        대부분의 경우, 지역농협에서 발급받은 계좌도 거의 모든 상황에서 문제 없이 사용할 수 있습니다.
+                    </p>
+                    <img src="media/NH-bank2.png" alt="농협 은행 구분2" class="about-img-small">
+                    <img src="media/NH-bank3.png" alt="농협 은행 구분3" class="about-img-small">
+                </td>
+            </tr>
+            <tr>
+                <td class="about-table-img-cell">
+                    <img src="media/NH-work.png" alt="지역 농협 역할1" class="about-img-large">
+                    <img src="media/NH-work2.png" alt="지역 농협 역할3" class="about-img-large">
+                </td>
+                <td>
+                    <h4>농협이 하고 있는 노력</h4>
+                    <p>1. 농민 및 지역사회 지원<br>
+                        농협은 조합원이 출자하여 만든 비영리 법인이며 생산자 단체입니다.
+                        이윤추구가 궁극적인 목적인 은행(주식회사)과는 설립 이념이 다릅니다.
+                        은행의 이익은 대주주인 대기업에 대부분 환원되나 농협의 이익은 경제적 약자인 조합원 및 지역주민에게 모두 환원됩니다.
+                        즉, 농민들의 생계를 지원하고 농촌 지역사회 발전에 기여함으로써 지속적인 성장을 이룰 수 있는만큼, 교육, 자원 지원, 시설 개선 등을 통해
+                        농민들의 경제적 안정성을 향상시키고 농촌 지역의 활기를 불러일으키고자 노력중입니다.
+                        <br><br>
+                        2. 파트너십 강화<br>
+                        농협은 지역 경제발전에 힘쓰는 지역 주민의 은행으로써 역할을 다하고 있습니다.
+                        도시와 농촌을 연결하며 전국 어디서나 편리한 금융거래를 할 수 있으며 지역내 기여도 및 운영측면에서 실질적인 국내 최대 지역금융 기관입니다.
+                        농업 및 농촌 발전에는 다양한 이해관계자들과의 협력이 필요하기에, 농협은 정부, 연구기관, 비즈니스 파트너 등과의 협력을 강화하고 있습니다.
+                        <br><br>
+                        3.지속 가능한 농업<br>
+                        농협은 조합원 및 지역주민의 편익을 위하여 여러 가지 사업을 하고 있습니다.
+                        조합원 및 지역 주민들의 의견을 수렴 사업 방침을 결정하고 매분기 조합운영 상황을 공개함으로서 투명한 경영을 통해 지역발전에 이바지하고 있습니다.
+                        그리고 환경 보호 및 지속 가능성은 미래의 중요한 요소로, 농협은 친환경적인 농업 방법을 적극적으로 채택하고, 자원 관리 및 폐기물 처리 등에 대한 책임을 다하고 있습니다.
+                        <br><br>
+                        4. 기술 혁신과 디지털화<br>
+                        농업 분야에서의 기술 혁신과 디지털화는 농협이 미래에 경쟁력을 유지하고 성장을 이끌기 위한 필수분야이며,
+                        스마트 팜 기술, 센서 네트워크, 빅데이터 분석 등을 통해 생산성을 향상시키고 효율성 증대를 위하여 노력 중에 있습니다.
+                    </p>
+                    <br><br>
+                    <img src="media/NH-work1.png" alt="지역 농협 역할2" class="about-img-large">
+                </td>
+            </tr>
+            <tr>
+                <td class="about-table-img-cell">
+                    <img src="media/NH-rank.png" alt="지역 농협 직급" class="about-img-large">
+                </td>
+                <td>
+                    <h4>지역농협 채용 과정과 직급</h4>
+                    <p><a href="https://jrs.jobkorea.co.kr/nhrecruit" target="_blank">지역농협 채용 홈페이지 바로가기</a><br><br>
+                        STEP 1: 서류접수, 온라인 인,적성 검사 및 자기소개서 심사<br>
+                        STEP 2: 필기시험(인, 적성 및 직무능력평가) - 1차 합격자에 한함<br>
+                        STEP 3: 면접시험 및 신체검사 - 2차 합격자에 한함<br>
+                        STEP 4: 최종합격 및 배치 - 근로계약서 작성 후 배치된 사무소에서 근무 <br><br>
+                        <span>채용 과정에서 많은 조건이 존재합니다. 지역농협 채용 홈페이지 기타 유의사항 반드시 체크</span>
+                    </p>
+                    <br>
+                    <img src="media/NH-volunteer.png" alt="지역 농협 채용" class="about-img-large">
+                </td>
+            </tr>
+        </table>
 
-        <br>
-        <h3>본인 소개 페이지 작성(2022 삼성전자 비경력직 자소서 항목 기반으로 선정함)</h3>
-        <div>
-            <p><strong>주제 선정 동기와 이루고 싶은 목표</strong></p>
-            <button onclick="toggleAnswer(this, '주제 선정의 이유와 목표에 대해 서술합니다.')">답변 보기</button>
+        <div class="about-images">
+            <div class="about-image-item">
+                <img src="media/NH-person.png" alt="지역 농협 인재상" class="about-img-fluid">
+            </div>
+            <div class="about-image-item">
+                <img src="media/NH-vision.png" alt="지역 농협 비전1" class="about-img-fluid">
+            </div>
+            <div class="about-image-item">
+                <img src="media/NH-vision2.png" alt="지역 농협 비전2" class="about-img-fluid">
+            </div>
         </div>
-        <div>
-            <p><strong>본인 성장 과정(가장 큰 영향을 끼친 사건, 인물 등을 포함하여 작성 - 작품 속 가상인물도 가능)</strong></p>
-            <button onclick="toggleAnswer(this, '가장 큰 영향을 끼친 사건, 인물 등을 포함하여 작성합니다.')">답변 보기</button>
+
+        
+        <br><br><br><br>
+        <h3>주제 관련 Future Plan  진로에 연관된 내용으로 관심 기술 공부 계획 및 취업(혹은 대학원, 창업 등) 준비 계획 작성 (공모전, 인턴십, 논문, 기타 취업 준비 계획)</h3>
+        <div class="future-plan-content">
+            <div class="future-plan-item">
+                <p>
+                    저는 무언가 거창한 목표를 이루기 위해 대학에 온 것이 아니라, 소소하게 부모님께 용돈을 드리며 행복하게 살 수 있는 직장을 구하기 위해 진학했습니다. 
+                    그래서 범용성이 높은 이공계 중에서도 컴퓨터공학부를 선택했습니다. 대학에서 배운 알고리즘과 체계적인 사고 방식은 일상생활에서 많은 도움을 주고 있습니다. 
+                    특히, 코딩할 때 체계적으로 생각하는 방법은 문제 해결 능력을 키우는 데 크게 기여했습니다. 저는 관심있는 특정 기술에 집중하기보다는, 
+                    강의 시간에 다양한 기술을 폭넓게 배우며 학점을 관리하는 데 중점을 두고 있습니다. 이 과정을 통해 모든 기술에 대해 얕고 넓게 이해함으로써, 종합적인 역량을 키워가고 있습니다.<br><br>
+                    
+                    <span>최종 목표: 지역농협 취업</span><br>
+                    취업 준비 계획으로 매 순간마다 열심히 최선을 다해 그리디(greedy)하게 최종목표까지 도달할 것입니다.<br><br>
+                    일단 졸업을 해야 하기에 가장 큰 장애물인 자격증 및 어학능력에 해당하는 자격 취득점수 합계를 3점 이상 취득해야 합니다. 
+                    그러기 위해서 2024년도에 정보처리산업기사 자격증과 컴퓨터활용능력 자격증에 응시하고 2025년도에는 정보처리기사 자격증에 응시할 것입니다.
+                    어학 점수는 현실적으로 토익 450점 이상을 목표로 합니다. 졸업 요건으로 자격증 말고도 공모전 1회 출품이나 미래설계가 있지만, 
+                    미래설계는 꾸준히 학기별로 모으고 있고 공모전은 수상 못해도 상관없어서 부수적으로 해결 가능합니다. 졸업에 성공하면 지역농협에 도전합니다.<br>
+                    <span>그러므로, 졸업 전까지 정보처리산업기사(2점), 정보처리기사(3점), 컴퓨터활용능력 2급(1점), 토익 450점 이상(1점)을 계속 도전하여 3점을 채울 생각입니다.</span><br><br>
+                    무엇(What)을 어떻게(How) 준비해야 자격증을 취득하기 쉬울까 고민해보니 자격증의 특성상 문제의 유형이나 패턴이 비슷하게 나온다는 점에서 정했습니다.<br>
+                    저는 <span>누군가 잘 정리해 놓은 관련 자격증의 문제집과 CBT 전자문제집을 가지고 문제를 최대한 많이 풀어보는식으로 준비</span>할 것입니다.<br><br>
+                    CBT: Computer Based Test의 줄임말, 컴퓨터를 기반으로 한 시험<br>
+                </p>
+                <a href="https://www.comcbt.com/" target="_blank">CBT 바로가기</a><br>
+                <a href="https://m.comcbt.com/" target="_blank">CBT 모바일 바로가기</a><br>
+            </div>
+    
+            <div class="future-plan-item">
+                <img src="media/plan1.png" alt="자격증" class="about-img-large">
+                <img src="media/plan2.png" alt="어학" class="about-img-large">
+            </div>
+    
+            <div class="future-plan-item">
+                <h4>지역농협 공부 계획</h4>
+                <p>
+                    원서접수: <a href="https://jrs.jobkorea.co.kr/nhrecruit" target="_blank">지역농협 채용 홈페이지 바로가기</a><br><br>
+                    지역 농협을 준비하는 사람들이 가장 많이 보는 책 이름이 고시넷 NCS 지역농협 6급 통합 기본서입니다. 책 이름이 생소하지만 위의 설명을 읽었다면 바로 알 수 있습니다.<br>
+                    지역농협: 농협중앙회/지역농협 등 채용은 각각 별도로 진행됩니다. 저는 지역농협에 들어가고 싶기에 농.축협이나 지역농협이라고 써진 책을 봐야 합니다.<br>
+                    6급: 공무원과 달리 농협은 신입사원을 6급으로 칭합니다. 따라서, 신입사원으로 들어가야하는 저에게 맞는 책입니다.<br>
+                    고시넷: 한국에서 각종 시험 관련 정보를 제공하는 온라인 사이트 및 출판사입니다. 매년 변화하는 시험정보 자료나 책을 제공하는 회사입니다.<br>
+                    NCS: National Competency Standards 국가직무능력표준을 의미, 산업현장에서 직무를 수행하기 위해 요구되는 지식.기술.태도 등의 내용을 국가가 체계화한 기준입니다.<br>
+                    통합 기본서: 지역농협 필기에 필요한 문제들과 채용에 필요한 정보들이 들어 있습니다.<br>
+                    파트1: 영역별 기본학습 (의사소통능력, 수리능력, 문제해결능력, 자원관리능력, 조직이해능력)<br>
+                    파트2: 실전 연습이 가능한 기출 예상문제 5개정도 있음<br>
+                    파트3: 인성검사<br>
+                    파트4: 면접 가이드<br>
+                    2025년 정보처리기사 자격증을 딴 후에 바로 시작할 예정입니다. 필요시 인강을 들으면서 책을 달달 외우며 계속 공부하면 합격할 수 있다고 생각합니다.
+                </p>
+            </div>
         </div>
-        <div>
-            <p><strong>최근 사회 이슈 중 중요하다고 생각되는 한 가지를 선택하고 자신의 견해 기술</strong></p>
-            <button onclick="toggleAnswer(this, '프로젝트/과제 중 기술적으로 가장 어려웠던 부분과 해결 방안에 대해 서술합니다.')">답변 보기</button>
+
+        <div class="future-plan-cards">
+            <div class="card">
+                <h4>정보처리산업기사 공부 계획</h4>
+                <p>
+                    원서접수: <a href="https://q-net.or.kr/crf005.do?id=crf00503&jmCd=2290" target="_blank">Q-Net 바로가기</a><br>
+                    상세정보는 Q-Net에 있습니다.<br><br>
+                    정기시험이라 1년에 3번 접수를 받기에 기말고사 끝나고 2024년도 마지막 원서접수가 있어서 접수할 것입니다.
+                    원서접수 후 필기까지 텀이 있고 또 실기까지 텀이 있어서 텀(사이 기간)에 이기적 문제집을 풀고 필기와 실기를 볼 예정입니다.
+                </p>
+            </div>
+    
+            <div class="card">
+                <h4>정보처리기사 공부 계획</h4>
+                <p>
+                    원서접수: <a href="https://www.q-net.or.kr/crf005.do?id=crf00505&jmCd=1320" target="_blank">Q-Net 바로가기</a><br>
+                    상세정보는 Q-Net에 있습니다.<br><br>
+                    정보처리산업기사 자격증을 취득한 후, 정보처리기사 자격증에 도전할 계획입니다. 
+                    정기시험이라 1년에 3번 접수를 받기에 2025년 1년 동안 될 때까지 계속 도전합니다.
+                    필기시험은 산업기사와 비슷한 유형으로 구성되지만, 난이도가 더 높기에 
+                    기출문제를 풀면서 부족한 부분을 보완하고, 실기시험에서는 심화된 프로그래밍 문제를 집중적으로 연습할 것입니다.
+                </p>
+            </div>
+    
+            <div class="card">
+                <h4>컴퓨터활용능력 2급 공부 계획</h4>
+                <p>
+                    원서접수: <a href="https://license.korcham.net/" target="_blank">대한상공회의소 자격평가사업단</a><br>
+                    상세정보는 대한상공회의소 자격평가사업단에 있습니다.<br><br>
+                    상시 시험이라 부담은 없고 4학년 전에는 무조건 따고자 합니다.
+                    CBT 위주로 컴퓨터 일반 과목은 기출문제를 중심으로 학습하고, 스프레드시트 일반 과목은 실기와 필기 시험을 같이 준비할 예정입니다.
+                </p>
+            </div>
+    
+            <div class="card">
+                <h4>토익 공부 계획</h4>
+                <p>
+                    원서접수: <a href="https://exam.toeic.co.kr/" target="_blank">ETS TOEIC 바로가기</a><br>
+                    상세정보는 토익 공식사이트에 있습니다.<br><br>
+                    목표 점수는 450점 이상으로 한달에 1번 모의고사를 풀어 실전 감각을 익히고 한 학기당 1번은 모의토익을 볼 것입니다.
+                    듣기 파트는 다양한 영어 듣기 자료를 활용하여 청취 능력을 향상시키고, 독해 파트는 기출문제를 반복해서 풀어 문제 유형에 익숙해지도록 할 것입니다.
+                </p>
+            </div>
         </div>
+
+        <br><br>
+        <!--Cnavas로 이미지 그리기 책 추천-->
         <div>
-            <p><strong>프로젝트/과제 중 기술적으로 가장 어려웠던 부분과 
-                해결 방안에 대해 서술 (과제 개요, 어려웠던 점, 해결
-                방법, 결과 포함)</strong></p>
-            <button onclick="toggleAnswer(this, '글, 그림 등 자유 양식으로 작성합니다.')">답변 보기</button>
+            <label for="bookSelect">도서 추천 : </label>
+            <select id="bookSelect">
+                <option value="book1">지역농협 NCS</option>
+                <option value="book2">정보처리산업기사</option>
+                <option value="book3">정보처리기사</option>
+            </select>
+            <button onclick="drawBookCover()">그리기</button>    
         </div>
-        <div>
-            <p><strong>본인 역량에 대해 자유롭게 기술</strong></p>
-            <button onclick="toggleAnswer(this, '프로젝트/과제 중 기술적으로 가장 어려웠던 부분과 해결 방안에 대해 서술합니다.')">답변 보기</button>
+        <canvas id="bookCanvas" width="350" height="470"></canvas>
+
+
+        <br><br><br>
+        <div class="intro-self">
+            <h3>본인 소개 페이지 작성(2022 삼성전자 비경력직 자소서 항목 기반으로 선정함)</h3>
+            <div>
+                <p><strong>Q. 농협 지원 동기와 이루고 싶은 목표</strong></p>
+                <button onclick="toggleAnswer(this, answers.topicAndGoal)">답변 보기</button>
+            </div>
+            <div>
+                <p><strong>Q. 본인 성장 과정(가장 큰 영향을 끼친 사건, 인물 등을 포함하여 작성 - 작품 속 가상인물도 가능)</strong></p>
+                <button onclick="toggleAnswer(this, answers.growthProcess)">답변 보기</button>
+            </div>
+            <div>
+                <p><strong>Q. 최근 사회 이슈 중 중요하다고 생각되는 한 가지를 선택하고 자신의 견해 기술</strong></p>
+                <button onclick="toggleAnswer(this, answers.socialIssue)">답변 보기</button>
+            </div>
+            <div>
+                <p><strong>Q. 프로젝트/과제 중 기술적으로 가장 어려웠던 부분과 해결 방안에 대해 서술 (과제 개요, 어려웠던 점, 해결 방법, 결과 포함)</strong></p>
+                <button onclick="toggleAnswer(this, answers.projectDifficulty)">답변 보기</button>
+            </div>
+            <div>
+                <p><strong>Q. 본인 역량에 대해 자유롭게 기술</strong></p>
+                <button onclick="toggleAnswer(this, answers.personalAbility)">답변 보기</button>
+            </div>
         </div>
     </section>
 
 
-    <section id="skills" class="cont-section-skill">
-        <h2>Skills</h2>
+    <section id="skill" class="cont-section-skill">
+        <h2>Skill</h2>
         <hr>
         <div class="skills-category">
             <!-- Programming Languages -->
@@ -104,13 +350,13 @@
                 <div class="skill">
                     <img src="media/css-icon.png" alt="CSS" class="large-icon">
                     <div class="skill-bar">
-                        <div class="skill-level" style="width: 50%;"></div>
+                        <div class="skill-level" style="width: 60%;"></div>
                     </div>
                 </div>
                 <div class="skill">
                     <img src="media/js-icon.png" alt="JavaScript" class="large-icon">
                     <div class="skill-bar">
-                        <div class="skill-level" style="width: 50%;"></div>
+                        <div class="skill-level" style="width: 60%;"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -191,47 +437,86 @@
         <hr>
         <div class="projects-container">
             <div class="project-card">
-                <img src="media/project1.jpg" alt="Project 1" class="project-image">
-                <h3>Project Title 1</h3>
-                <p>Short description of the project. Highlight the main features and technologies used.</p>
-                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-                <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+                <img src="media/swing-img.png" alt="프로젝트 1" class="project-image">
+                <div class="project-details">
+                    <h3>노동자 인력 관리 프로그램</h3>
+                    <p>설명: 처음으로 mySQL 사용하여 CRUD 기본기를 충실히 다진 소켓 통신 자바 프로젝트<br>
+                        실제로 물류센터 알바를 해본 경험을 토대로 일용직들이 출근할 날짜를 선택하고 관리자가 명단을 확정지을 수 있게 만든 스윙 프로젝트
+                    </p>
+                    <p><strong>기술: Java, MySQL</strong></p>
+                    <p><strong>일자: 2023년(2학년)</strong></p>
+                    <a href="https://github.com/imjongho/Java/tree/main/Java_Programming2_Exam" target="_blank">GitHub에서 보기</a>
+                </div>
             </div>
             <div class="project-card">
-                <img src="media/project2.jpg" alt="Project 2" class="project-image">
-                <h3>Project Title 2</h3>
-                <p>Short description of the project. Highlight the main features and technologies used.</p>
-                <p><strong>Technologies:</strong> React, Node.js</p>
-                <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+                <img src="media/web2-img.png" alt="프로젝트 2" class="project-image">
+                <div class="project-details">
+                    <h3>수강신청 페이지</h3>
+                    <p>설명: 소프트웨어공학에서 배운 화면 설계, 유스케이스 다이어그램, 시퀀스 다이어그램, eventFlow 등을 충분히 고려해서 만들어본 수강신청 웹 페이지</p>
+                    <p><strong>기술: HTML, CSS, JavaScript, php, Apache, MySQL</strong></p>
+                    <p><strong>일자: 2024년(3학년)</strong></p>
+                    <a href="https://github.com/imjongho/HTML/tree/main/Apache_php/2024_SW_Engineering_Project" target="_blank">GitHub에서 보기</a>
+                </div>
             </div>
             <div class="project-card">
-                <img src="media/project3.jpg" alt="Project 3" class="project-image">
-                <h3>Project Title 3</h3>
-                <p>Short description of the project. Highlight the main features and technologies used.</p>
-                <p><strong>Technologies:</strong> Python, Django</p>
-                <a href="https://github.com/yourusername/project3" target="_blank">View on GitHub</a>
+                <img src="media/web-img.png" alt="프로젝트 3" class="project-image">
+                <div class="project-details">
+                    <h3>"본인 소개/관심 기술/관심 기업" 웹페이지</h3>
+                    <p>설명: 진로 성찰 / 자기 평가 / 취업 준비를 위해 자소서 등 자기자신을 점검하는 시간을 가지고 표현하는 웹 페이지</p>
+                    <p><strong>기술: HTML, CSS, JavaScript</strong></p>
+                    <p><strong>일자: 2024년(3학년)</strong></p>
+                    <a href="https://github.com/imjongho/HTML/tree/main/2024_Web_Edu/Project_IntroduceMyself" target="_blank">GitHub에서 보기</a>
+                </div>
             </div>
             <div class="project-card">
-                <img src="media/project4.jpg" alt="Project 4" class="project-image">
-                <h3>Project Title 4</h3>
-                <p>Short description of the project. Highlight the main features and technologies used.</p>
-                <p><strong>Technologies:</strong> Java, Spring Boot</p>
-                <a href="https://github.com/yourusername/project4" target="_blank">View on GitHub</a>
+                <img src="media/app-img.jpg" alt="프로젝트 4" class="project-image">
+                <div class="project-details">
+                    <h3>사진관 예약 앱</h3>
+                    <p>설명: 다수의 사용자가 여러 사진관 중에 한곳을 선택해 방문 예약과 대여를 쉽게 할 수 있도록 만든 앱 프로젝트</p>
+                    <p><strong>기술: AndroidStudio, FireBase(Storage, NoSQL)</strong></p>
+                    <p><strong>일자: 2024년(3학년)</strong></p>
+                    <a href="https://github.com/imjongho/AndroidStudio" target="_blank">GitHub에서 보기</a>
+                </div>
             </div>
         </div>
     </section>
     
-    
+       
     <section id="contact" class="cont-section">
         <h2>Contact</h2>
         <hr>
-        <p>여기에 Contact 섹션 내용을 추가하세요.</p>
+        <form id="contact-form">
+            <h3>Send Your Message</h3>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="이메일을 입력하세요 (예: example@example.com)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="이름을 입력하세요 (예: 홍길동)" required>
+            </div>
+            <div class="form-group">
+                <textarea id="message" name="message" placeholder="메시지를 입력하세요 (예: 문의 내용 또는 인사말)" required></textarea>
+            </div>
+            <div class="form-buttons">
+                <button type="submit" class="btn">Send Message</button>
+                <button type="reset" class="btn">Reset</button>
+            </div>
+        </form>
     </section>
+    
 </main>
 
+
 <footer id="footer">
-    <p>© 2022 - HyeRin</p>
+    <p>© 2024 - made by imjongho
+        <a href="https://github.com/imjongho" target="_blank">
+            <img src="media/github-icon.png" alt="GitHub" class="footer-icon">
+        </a>
+        <a href="https://www.notion.so/8a6a4f757e774da080fcf2d46b0f1f7e?v=46de6427ec344cec8280fe1f541a9ff4&pvs=4" target="_blank">
+            <img src="media/notion-icon.png" alt="Notion" class="footer-icon">
+        </a>
+    </p>
 </footer>
+
 
 <button onclick="moveToTop()" class="btn-moveTop">Top</button>
 
