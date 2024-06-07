@@ -6,6 +6,8 @@ function moveToTop() {
 
 // 초기화 함수
 function init() {
+    window.alert("202001821 임종호의 자기소개 페이지"); // 페이지 로드 시 경고 메시지 표시
+
     var imgIndex = 0; // 현재 이미지 인덱스
     var position = 0; // 슬라이드 위치
     var IMG_WIDTH = 300; // 이미지 너비
@@ -204,4 +206,7 @@ function drawBookCover() {
     }
 }
 
-window.onload = init;
+
+window.onload = function() {
+    init();
+};
